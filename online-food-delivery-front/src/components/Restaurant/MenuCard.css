@@ -1,0 +1,423 @@
+.menu-card {
+  width: min(100%, 1400px);
+  margin: 0 auto 20px !important;
+
+  border: 1px solid #3a3a3a !important;
+  border-radius: 16px !important;
+
+  background: #181818 !important;
+
+  box-shadow: none !important;
+
+  overflow: hidden !important;
+}
+
+.menu-card-summary {
+  min-height: clamp(150px, 14vw, 190px) !important;
+
+  padding: clamp(16px, 2.5vw, 28px) !important;
+
+  background: #181818 !important;
+
+  color: #ffffff !important;
+}
+
+.menu-card-summary.Mui-expanded {
+  min-height: clamp(150px, 14vw, 190px) !important;
+}
+
+.menu-card-summary .MuiAccordionSummary-content {
+  width: 100%;
+
+  margin: 0 !important;
+
+  align-items: center !important;
+}
+
+.menu-card-summary .MuiAccordionSummary-expandIconWrapper {
+  color: #ffffff !important;
+
+  margin-left: 16px;
+}
+
+.menu-card-summary .MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+  color: #ffffff !important;
+}
+
+.menu-card-content {
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.menu-card-food {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    clamp(110px, 13vw, 175px)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: clamp(16px, 2.5vw, 30px);
+}
+
+.menu-card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  min-width: 0;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: clamp(10px, 1vw, 14px);
+}
+
+.menu-card-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: clamp(5px, 0.7vw, 9px);
+}
+
+.menu-card-name {
+  margin: 0 !important;
+
+  font-size: clamp(20px, 2.2vw, 30px) !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1.2 !important;
+
+  color: #ffffff !important;
+
+  overflow-wrap: anywhere;
+}
+
+.menu-card-price {
+  margin: 0 !important;
+
+  font-size: clamp(16px, 1.5vw, 21px) !important;
+
+  font-weight: 600 !important;
+
+  line-height: 1.3 !important;
+
+  color: #ffffff !important;
+}
+
+.menu-card-description {
+  margin: 2px 0 0 !important;
+
+  max-width: 800px;
+
+  font-size: clamp(14px, 1.2vw, 17px) !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.5 !important;
+
+  color: #dddddd !important;
+
+  overflow-wrap: anywhere;
+}
+
+.menu-card-unavailable {
+  margin: 3px 0 0 !important;
+
+  font-size: clamp(13px, 1.1vw, 15px) !important;
+
+  font-weight: 600 !important;
+
+  color: #ff6b6b !important;
+}
+
+.menu-card-details {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: clamp(20px, 3vw, 32px) !important;
+
+  background: #181818 !important;
+
+  border-top: 1px solid #333333 !important;
+}
+
+.ingredients-container {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 220px), 270px));
+
+  gap: clamp(16px, 2vw, 28px);
+
+  align-items: start;
+}
+
+.ingredient-box {
+  width: 100%;
+
+  min-height: 140px;
+
+  padding: clamp(16px, 2vw, 22px);
+
+  box-sizing: border-box;
+
+  border: 1px solid #3d3d3d;
+
+  border-radius: 13px;
+
+  background: #222222;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.ingredient-category {
+  margin: 0 0 clamp(10px, 1vw, 14px);
+
+  font-size: clamp(17px, 1.5vw, 20px);
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: #ffffff;
+}
+
+.ingredient-group {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  gap: 4px !important;
+}
+
+.ingredient-label {
+  width: fit-content !important;
+
+  max-width: 100%;
+
+  margin: 0 !important;
+
+  color: #ffffff !important;
+}
+
+.ingredient-label .MuiFormControlLabel-label {
+  font-size: clamp(14px, 1.1vw, 16px) !important;
+
+  font-weight: 400 !important;
+
+  color: #eeeeee !important;
+
+  overflow-wrap: anywhere;
+}
+
+.ingredient-checkbox {
+  padding: 5px !important;
+
+  color: #ff6b35 !important;
+
+  flex-shrink: 0;
+}
+
+.ingredient-checkbox.Mui-checked {
+  color: #ff6b35 !important;
+}
+
+.ingredient-checkbox.Mui-disabled {
+  color: #666666 !important;
+}
+
+.no-ingredients {
+  margin: 0 !important;
+
+  padding: 10px 0 !important;
+
+  font-size: clamp(14px, 1.1vw, 15px) !important;
+
+  color: #aaaaaa !important;
+}
+
+.add-to-cart-container {
+  width: 100%;
+
+  margin-top: clamp(18px, 2vw, 26px);
+
+  display: flex;
+
+  align-items: center;
+}
+
+.add-to-cart-button {
+  min-width: clamp(145px, 15vw, 175px) !important;
+
+  min-height: 46px !important;
+
+  height: clamp(46px, 4vw, 50px) !important;
+
+  padding: 0 clamp(20px, 2.5vw, 28px) !important;
+
+  border-radius: 14px !important;
+
+  background: #ff6b2c !important;
+
+  color: #ffffff !important;
+
+  font-size: clamp(14px, 1.1vw, 16px) !important;
+
+  font-weight: 700 !important;
+
+  text-transform: none !important;
+
+  box-shadow: none !important;
+}
+
+.add-to-cart-button:hover {
+  background: #f45a1b !important;
+
+  box-shadow: none !important;
+}
+
+.add-to-cart-button.Mui-disabled {
+  background: #555555 !important;
+
+  color: #aaaaaa !important;
+
+  opacity: 1 !important;
+}
+
+.menu-card .MuiAccordionSummary-root {
+  border-radius: 0 !important;
+}
+
+.menu-card .MuiAccordionSummary-root:hover {
+  background: #1e1e1e !important;
+}
+
+.menu-card .MuiAccordionDetails-root {
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .menu-card {
+    border-radius: 14px !important;
+  }
+
+  .menu-card-summary {
+    padding: 18px !important;
+  }
+
+  .menu-card-food {
+    grid-template-columns: 120px minmax(0, 1fr);
+
+    gap: 18px;
+  }
+
+  .menu-card-details {
+    padding: 22px !important;
+  }
+
+  .ingredients-container {
+    grid-template-columns:
+      repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .ingredient-box {
+    min-height: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-card {
+    width: 100%;
+
+    margin-bottom: 16px !important;
+
+    border-radius: 12px !important;
+  }
+
+  .menu-card-summary {
+    min-height: 130px !important;
+
+    padding: 14px !important;
+  }
+
+  .menu-card-summary.Mui-expanded {
+    min-height: 130px !important;
+  }
+
+  .menu-card-summary .MuiAccordionSummary-expandIconWrapper {
+    margin-left: 8px;
+  }
+
+  .menu-card-food {
+    grid-template-columns: 90px minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+  .menu-card-image {
+    border-radius: 10px;
+  }
+
+  .menu-card-info {
+    gap: 4px;
+  }
+
+  .menu-card-details {
+    padding: 18px !important;
+  }
+
+  .ingredients-container {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+  .ingredient-box {
+    min-height: auto;
+
+    padding: 16px;
+  }
+
+  .add-to-cart-button {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-card-summary {
+    padding: 12px !important;
+  }
+
+  .menu-card-food {
+    grid-template-columns: 75px minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .menu-card-summary .MuiAccordionSummary-expandIconWrapper {
+    margin-left: 4px;
+  }
+
+  .menu-card-details {
+    padding: 14px !important;
+  }
+
+  .ingredient-box {
+    padding: 14px;
+  }
+}

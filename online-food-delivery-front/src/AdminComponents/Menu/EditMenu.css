@@ -1,0 +1,736 @@
+.edit-menu-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0 0 50px;
+  color: #ffffff;
+}
+
+.edit-menu-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(24px, 3vw, 40px) !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 107, 44, 0.09),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(255, 107, 44, 0.035),
+      transparent 30%
+    ),
+    #0d0d0d !important;
+  color: #ffffff !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35) !important;
+}
+
+.edit-menu-header {
+  width: 100%;
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edit-menu-title {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: clamp(28px, 3vw, 40px) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.8px;
+}
+
+.edit-menu-subtitle {
+  margin-top: 8px !important;
+  color: #777777 !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.edit-menu-back-button {
+  min-width: 95px !important;
+  min-height: 40px !important;
+  flex-shrink: 0;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  color: #aaaaaa !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+.edit-menu-back-button:hover {
+  border-color: rgba(255, 107, 44, 0.35) !important;
+  background: rgba(255, 107, 44, 0.07) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.edit-menu-message {
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 13px 16px;
+  box-sizing: border-box;
+  border-radius: 11px;
+}
+
+.edit-menu-message .MuiTypography-root {
+  margin: 0;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.edit-menu-error {
+  border: 1px solid rgba(244, 67, 54, 0.2);
+  background: rgba(244, 67, 54, 0.07);
+  color: #ef7770;
+}
+
+.edit-menu-error .MuiTypography-root {
+  color: #ef7770 !important;
+}
+
+.edit-menu-success {
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  background: rgba(76, 175, 80, 0.07);
+  color: #81c784;
+}
+
+.edit-menu-success .MuiTypography-root {
+  color: #81c784 !important;
+}
+
+.edit-menu-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.edit-menu-basic-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(180px, 0.7fr);
+  gap: 18px;
+}
+
+.edit-menu-form .MuiTextField-root,
+.edit-menu-form .MuiFormControl-root {
+  width: 100%;
+}
+
+.edit-menu-form .MuiInputLabel-root {
+  color: #777777 !important;
+}
+
+.edit-menu-form .MuiInputLabel-root.Mui-focused {
+  color: #ff6b2c !important;
+}
+
+.edit-menu-form .MuiOutlinedInput-root {
+  min-height: 52px;
+  color: #ffffff !important;
+  border-radius: 11px !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+
+.edit-menu-form .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  transition: border-color 0.2s ease;
+}
+
+.edit-menu-form .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 107, 44, 0.35) !important;
+}
+
+.edit-menu-form .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #ff6b2c !important;
+  border-width: 1px !important;
+}
+
+.edit-menu-form .MuiInputBase-input {
+  color: #ffffff !important;
+  font-size: 14px !important;
+}
+
+.edit-menu-form .MuiInputBase-input::placeholder {
+  color: #666666 !important;
+}
+
+.edit-menu-form textarea {
+  line-height: 1.65 !important;
+}
+
+.edit-menu-form .MuiInputAdornment-root {
+  color: #ff8c5a !important;
+}
+
+.edit-menu-form .MuiInputAdornment-root .MuiTypography-root {
+  color: #ff8c5a !important;
+}
+
+.edit-menu-form .MuiSelect-select {
+  min-height: 52px !important;
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center;
+  color: #ffffff !important;
+  font-size: 14px !important;
+}
+
+.edit-menu-form .MuiSelect-icon {
+  color: #777777 !important;
+}
+
+.edit-menu-form .MuiCheckbox-root {
+  padding: 7px;
+  color: #555555;
+}
+
+.edit-menu-form .MuiCheckbox-root.Mui-checked {
+  color: #ff6b2c !important;
+}
+
+.edit-menu-form .MuiFormControlLabel-label {
+  color: #bdbdbd !important;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.edit-menu-images-section,
+.edit-menu-ingredients {
+  width: 100%;
+  padding: 21px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 107, 44, 0.045),
+      transparent 35%
+    ),
+    rgba(255, 255, 255, 0.015);
+}
+
+.edit-menu-section-title {
+  margin: 0 0 5px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 750 !important;
+  line-height: 1.4 !important;
+}
+
+.edit-menu-section-description {
+  margin: 0 0 16px !important;
+  color: #707070 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+.edit-menu-image-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-menu-image-input .MuiTextField-root {
+  flex: 1;
+  min-width: 0;
+}
+
+.edit-menu-add-image-button {
+  width: 52px !important;
+  height: 52px !important;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 107, 44, 0.25) !important;
+  border-radius: 11px !important;
+  background: rgba(255, 107, 44, 0.07) !important;
+  color: #ff8c5a !important;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.25s ease !important;
+}
+
+.edit-menu-add-image-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: rgba(255, 107, 44, 0.55) !important;
+  background: rgba(255, 107, 44, 0.14) !important;
+}
+
+.edit-menu-add-image-button:disabled {
+  opacity: 0.35;
+}
+
+.edit-menu-image-list {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edit-menu-image-list .MuiChip-root {
+  max-width: 100%;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #bdbdbd;
+}
+
+.edit-menu-image-list .MuiChip-label {
+  max-width: min(360px, 45vw);
+  overflow: hidden;
+  padding-left: 12px;
+  padding-right: 7px;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.edit-menu-image-list .MuiChip-deleteIcon {
+  margin-right: 6px;
+  color: #777777;
+  font-size: 17px;
+  transition: color 0.2s ease;
+}
+
+.edit-menu-image-list .MuiChip-deleteIcon:hover {
+  color: #ff6b2c;
+}
+
+.edit-menu-options {
+  width: 100%;
+  min-height: 58px;
+  padding: 10px 17px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.edit-menu-options .MuiFormControlLabel-root {
+  margin: 0;
+}
+
+.edit-menu-section-header {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.edit-menu-section-header .edit-menu-section-title {
+  margin-bottom: 2px !important;
+}
+
+.edit-menu-count-chip {
+  flex-shrink: 0;
+  height: 29px !important;
+  border: 1px solid rgba(255, 107, 44, 0.2) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 107, 44, 0.07) !important;
+  color: #ff8c5a !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+
+.edit-menu-count-chip .MuiChip-label {
+  padding-inline: 11px;
+}
+
+.edit-menu-ingredients-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.edit-menu-ingredient-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-menu-ingredient-row .MuiTextField-root {
+  flex: 1;
+  min-width: 0;
+}
+
+.edit-menu-delete-ingredient {
+  width: 50px !important;
+  height: 50px !important;
+  flex-shrink: 0;
+  border: 1px solid rgba(244, 67, 54, 0.15) !important;
+  border-radius: 10px !important;
+  background: rgba(244, 67, 54, 0.05) !important;
+  color: #777777 !important;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease !important;
+}
+
+.edit-menu-delete-ingredient:hover {
+  transform: scale(1.04);
+  border-color: rgba(244, 67, 54, 0.35) !important;
+  background: rgba(244, 67, 54, 0.1) !important;
+  color: #ef7770 !important;
+}
+
+.edit-menu-empty {
+  margin: 10px 0 0 !important;
+  padding: 17px;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.015);
+  color: #666666 !important;
+  font-size: 12px !important;
+  text-align: center;
+}
+
+.edit-menu-actions {
+  width: 100%;
+  margin-top: 4px;
+  padding-top: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edit-menu-actions .MuiButton-root {
+  min-width: 135px;
+  min-height: 44px;
+  padding: 9px 20px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease !important;
+}
+
+.edit-menu-actions .MuiButton-outlined {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #aaaaaa !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+
+.edit-menu-actions .MuiButton-outlined:hover {
+  border-color: rgba(255, 107, 44, 0.3) !important;
+  background: rgba(255, 107, 44, 0.05) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.edit-menu-actions .MuiButton-contained {
+  background: linear-gradient(135deg, #ff6b2c, #f97316) !important;
+  color: #ffffff !important;
+  box-shadow: 0 9px 22px rgba(255, 107, 44, 0.18) !important;
+}
+
+.edit-menu-actions .MuiButton-contained:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 28px rgba(255, 107, 44, 0.3) !important;
+}
+
+.edit-menu-actions .MuiButton-root:disabled {
+  opacity: 0.55;
+  transform: none;
+}
+
+.edit-menu-loading {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #888888;
+}
+
+.edit-menu-loading .MuiCircularProgress-root {
+  color: #ff6b2c !important;
+}
+
+.edit-menu-loading .MuiTypography-root {
+  color: #777777 !important;
+  font-size: 13px !important;
+}
+
+.MuiPopover-paper {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 107, 44, 0.08),
+      transparent 40%
+    ),
+    #111111 !important;
+  color: #ffffff !important;
+}
+
+.MuiMenuItem-root {
+  min-height: 42px !important;
+  color: #c7c7c7 !important;
+  font-size: 13px !important;
+}
+
+.MuiMenuItem-root:hover {
+  background: rgba(255, 107, 44, 0.08) !important;
+  color: #ffffff !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background: rgba(255, 107, 44, 0.12) !important;
+  color: #ff8c5a !important;
+}
+
+@media (max-width: 1050px) {
+  .edit-menu-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .edit-menu-card {
+    padding: 24px !important;
+    border-radius: 18px !important;
+  }
+
+  .edit-menu-basic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-menu-header {
+    align-items: flex-start;
+  }
+
+  .edit-menu-title {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-menu-page {
+    padding-bottom: 30px;
+  }
+
+  .edit-menu-card {
+    padding: 18px !important;
+    border-radius: 16px !important;
+  }
+
+  .edit-menu-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+  }
+
+  .edit-menu-title {
+    font-size: 26px !important;
+  }
+
+  .edit-menu-subtitle {
+    font-size: 12px !important;
+  }
+
+  .edit-menu-back-button {
+    width: 100%;
+  }
+
+  .edit-menu-form {
+    gap: 17px;
+  }
+
+  .edit-menu-images-section,
+  .edit-menu-ingredients {
+    padding: 16px;
+  }
+
+  .edit-menu-image-input {
+    gap: 7px;
+  }
+
+  .edit-menu-add-image-button {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .edit-menu-section-header {
+    align-items: flex-start;
+  }
+
+  .edit-menu-section-description {
+    max-width: 250px;
+  }
+
+  .edit-menu-options {
+    min-height: auto;
+    padding: 12px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .edit-menu-actions {
+    flex-direction: column-reverse;
+    gap: 9px;
+  }
+
+  .edit-menu-actions .MuiButton-root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .edit-menu-card {
+    padding: 14px !important;
+    border-radius: 14px !important;
+  }
+
+  .edit-menu-title {
+    font-size: 23px !important;
+  }
+
+  .edit-menu-form .MuiInputBase-input {
+    font-size: 13px !important;
+  }
+
+  .edit-menu-images-section,
+  .edit-menu-ingredients {
+    padding: 13px;
+  }
+
+  .edit-menu-image-list .MuiChip-label {
+    max-width: 210px;
+  }
+
+  .edit-menu-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edit-menu-count-chip {
+    align-self: flex-start;
+  }
+
+  .edit-menu-ingredient-row {
+    align-items: stretch;
+  }
+
+  .edit-menu-delete-ingredient {
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edit-menu-page *,
+  .edit-menu-page *::before,
+  .edit-menu-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+.edit-menu-image-list {
+  width: 100%;
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.edit-menu-image-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  background: #151515;
+}
+
+.edit-menu-image-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.edit-menu-image-preview:hover img {
+  transform: scale(1.05);
+}
+
+.edit-menu-image-delete {
+  position: absolute !important;
+  top: 8px;
+  right: 8px;
+  width: 32px !important;
+  height: 32px !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(8px);
+}
+
+.edit-menu-image-delete:hover {
+  background: rgba(244, 67, 54, 0.85) !important;
+}
+
+@media (max-width: 800px) {
+  .edit-menu-image-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .edit-menu-image-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,694 @@
+.restau-order-table-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px 40px 60px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(255, 107, 53, 0.06),
+      transparent 30%
+    ),
+    #0b0b0b;
+
+  color: #ffffff;
+}
+
+.restau-order-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(27, 27, 27, 0.98),
+      rgba(15, 15, 15, 0.98)
+    ) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 16px !important;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025) !important;
+}
+
+.restau-order-header {
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 26px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0)
+    );
+}
+
+.restau-order-header h2 {
+  position: relative;
+
+  margin: 0;
+
+  padding-left: 14px;
+
+  color: #ffffff;
+
+  font-size: 1.45rem;
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
+}
+
+.restau-order-header h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 3px;
+
+  width: 3px;
+  height: calc(100% - 6px);
+
+  border-radius: 4px;
+
+  background: linear-gradient(
+    180deg,
+    #ff6b35,
+    #f97316
+  );
+}
+
+.restau-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.restau-menu-btn {
+  width: 42px !important;
+  height: 42px !important;
+
+  color: #ffffff !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b35,
+      #f97316
+    ) !important;
+
+  border-radius: 10px !important;
+
+  box-shadow:
+    0 7px 18px rgba(255, 107, 53, 0.15);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease !important;
+}
+
+.restau-menu-btn:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(255, 107, 53, 0.25);
+}
+
+.restau-menu-btn svg {
+  font-size: 21px;
+}
+
+.restau-order-table-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: transparent !important;
+
+  box-shadow: none !important;
+}
+
+.restau-order-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: transparent;
+}
+
+.restau-order-table .MuiTableCell-root {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  color: #e5e7eb;
+
+  font-family: inherit;
+}
+
+.restau-order-table thead .MuiTableCell-root {
+  height: 58px;
+
+  box-sizing: border-box;
+
+  padding: 0 22px;
+
+  color: #d1d5db;
+
+  background: #1b1b1b;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  white-space: nowrap;
+}
+
+.restau-order-table tbody .MuiTableRow-root {
+  background: transparent;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.restau-order-table tbody .MuiTableRow-root:hover {
+  background:
+    rgba(255, 107, 53, 0.035);
+}
+
+.restau-order-table tbody .MuiTableCell-root {
+  height: 105px;
+
+  padding: 14px 22px;
+
+  color: #e5e7eb;
+
+  font-size: 0.9rem;
+
+  vertical-align: middle;
+}
+
+.restau-order-table tbody .MuiTableRow-root:last-child .MuiTableCell-root {
+  border-bottom: none;
+}
+
+.restau-food-image {
+  width: 76px;
+  height: 76px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #151515;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.restau-food-image:hover {
+  transform: scale(1.04);
+
+  border-color:
+    rgba(255, 107, 53, 0.35);
+}
+
+.restau-food-no-image {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+
+  color: #777777;
+
+  background: #151515;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.restau-order-table tbody .MuiTableCell-root:nth-child(2) {
+  color: #f3f4f6;
+
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.restau-order-table tbody .MuiTableCell-root:nth-child(3) {
+  color: #b9b9b9;
+
+  font-size: 0.86rem;
+}
+
+.restau-order-price {
+  color: #ffffff !important;
+
+  font-size: 0.94rem !important;
+  font-weight: 700 !important;
+}
+
+.restau-order-table .MuiChip-root {
+  height: 34px;
+
+  min-width: 105px;
+
+  border-radius: 18px;
+
+  font-family: inherit;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  border: 1px solid transparent;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.restau-order-table .MuiChip-root:hover {
+  transform: translateY(-1px);
+
+  filter: brightness(1.08);
+}
+
+.restau-order-table .MuiChip-colorSuccess {
+  color: #86efac;
+
+  background:
+    rgba(34, 197, 94, 0.10);
+
+  border-color:
+    rgba(34, 197, 94, 0.20);
+}
+
+.restau-order-table .MuiChip-colorError {
+  color: #fca5a5;
+
+  background:
+    rgba(239, 68, 68, 0.10);
+
+  border-color:
+    rgba(239, 68, 68, 0.20);
+}
+
+.restau-delete-btn {
+  width: 38px !important;
+  height: 38px !important;
+
+  color: #ef4444 !important;
+
+  background:
+    rgba(239, 68, 68, 0.07) !important;
+
+  border: 1px solid rgba(239, 68, 68, 0.14) !important;
+
+  border-radius: 9px !important;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease !important;
+}
+
+.restau-delete-btn:hover {
+  color: #ffffff !important;
+
+  background: #ef4444 !important;
+
+  border-color: #ef4444 !important;
+
+  transform: translateY(-1px);
+}
+
+.restau-delete-btn svg {
+  font-size: 19px;
+}
+
+.restau-order-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.restau-order-table-container::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+.restau-order-table-container::-webkit-scrollbar-thumb {
+  background: #303030;
+
+  border-radius: 10px;
+}
+
+.restau-order-table-container::-webkit-scrollbar-thumb:hover {
+  background: #ff6b35;
+}
+
+.MuiSnackbar-root .MuiAlert-root {
+  min-width: 300px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.MuiSnackbar-root .MuiAlert-standardSuccess,
+.MuiSnackbar-root .MuiAlert-filledSuccess {
+  background: #1f9d55;
+}
+
+.MuiSnackbar-root .MuiAlert-standardError,
+.MuiSnackbar-root .MuiAlert-filledError {
+  background: #dc2626;
+}
+
+
+@media (max-width: 1200px) {
+  .restau-order-table-wrapper {
+    padding: 30px 30px 55px;
+  }
+
+  .restau-order-header {
+    padding: 0 22px;
+  }
+
+  .restau-order-table {
+    min-width: 800px;
+  }
+
+  .restau-order-table thead .MuiTableCell-root,
+  .restau-order-table tbody .MuiTableCell-root {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .restau-order-table-wrapper {
+    padding: 26px 24px 50px;
+  }
+
+  .restau-order-header {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .restau-order-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .restau-order-table {
+    min-width: 760px;
+  }
+
+  .restau-order-table thead .MuiTableCell-root {
+    height: 54px;
+    padding: 0 16px;
+    font-size: 0.78rem;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root {
+    height: 95px;
+    padding: 12px 16px;
+    font-size: 0.86rem;
+  }
+
+  .restau-food-image,
+  .restau-food-no-image {
+    width: 68px;
+    height: 68px;
+  }
+
+  .restau-order-table .MuiChip-root {
+    min-width: 96px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .restau-delete-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .restau-order-table-wrapper {
+    padding: 20px 16px 42px;
+  }
+
+  .restau-order-card {
+    border-radius: 14px !important;
+  }
+
+  .restau-order-header {
+    height: 66px;
+    padding: 0 16px;
+  }
+
+  .restau-order-header h2 {
+    font-size: 1.15rem;
+    padding-left: 11px;
+  }
+
+  .restau-order-header h2::before {
+    width: 3px;
+  }
+
+  .restau-menu-btn {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .restau-menu-btn svg {
+    font-size: 19px;
+  }
+
+  .restau-order-table {
+    min-width: 720px;
+  }
+
+  .restau-order-table thead .MuiTableCell-root {
+    height: 50px;
+    padding: 0 14px;
+    font-size: 0.74rem;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root {
+    height: 88px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+
+  .restau-food-image,
+  .restau-food-no-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .restau-food-no-image {
+    font-size: 0.65rem;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root:nth-child(2) {
+    font-size: 0.84rem;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root:nth-child(3) {
+    font-size: 0.78rem;
+  }
+
+  .restau-order-price {
+    font-size: 0.86rem !important;
+  }
+
+  .restau-order-table .MuiChip-root {
+    min-width: 88px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
+  .restau-delete-btn {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .restau-delete-btn svg {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .restau-order-table-wrapper {
+    padding: 16px 11px 35px;
+  }
+
+  .restau-order-header {
+    height: 62px;
+    padding: 0 13px;
+  }
+
+  .restau-order-header h2 {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+
+  .restau-header-actions {
+    gap: 5px;
+  }
+
+  .restau-menu-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .restau-order-table-container {
+    border-radius: 0 !important;
+  }
+
+  .restau-order-table {
+    min-width: 680px;
+  }
+
+  .restau-order-table thead .MuiTableCell-root {
+    padding: 0 12px;
+    font-size: 0.7rem;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root {
+    padding: 9px 12px;
+    font-size: 0.78rem;
+  }
+
+  .restau-food-image,
+  .restau-food-no-image {
+    width: 54px;
+    height: 54px;
+  }
+
+  .restau-order-table .MuiChip-root {
+    min-width: 82px;
+    height: 28px;
+    font-size: 0.66rem;
+  }
+
+  .restau-delete-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .MuiSnackbar-root .MuiAlert-root {
+    min-width: 0;
+    width: calc(100vw - 30px);
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .restau-order-table-wrapper {
+    padding: 13px 8px 30px;
+  }
+
+  .restau-order-header {
+    height: 58px;
+    padding: 0 11px;
+  }
+
+  .restau-order-header h2 {
+    font-size: 0.92rem;
+  }
+
+  .restau-menu-btn {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .restau-menu-btn svg {
+    font-size: 17px;
+  }
+
+  .restau-order-table {
+    min-width: 640px;
+  }
+
+  .restau-order-table thead .MuiTableCell-root {
+    padding: 0 10px;
+    font-size: 0.66rem;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root {
+    padding: 8px 10px;
+    font-size: 0.74rem;
+  }
+
+  .restau-food-image,
+  .restau-food-no-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root:nth-child(2) {
+    font-size: 0.76rem;
+  }
+
+  .restau-order-table tbody .MuiTableCell-root:nth-child(3) {
+    font-size: 0.7rem;
+  }
+
+  .restau-order-table .MuiChip-root {
+    min-width: 76px;
+    height: 26px;
+    font-size: 0.62rem;
+  }
+
+  .restau-delete-btn {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .restau-delete-btn svg {
+    font-size: 15px;
+  }
+}

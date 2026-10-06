@@ -1,0 +1,76 @@
+
+
+  [
+    {
+      "img": "cl_burger",
+      "name": "Classic Burger",
+      "price": 299,
+      "description": "Juicy grilled patty layered with fresh lettuce, cheese, and signature smoky sauce."
+    },
+    {
+      "img": "Italian_pizza",
+      "name": "Italian Pizza",
+      "price": 499,
+      "description": "Stone-baked pizza topped with rich mozzarella, fresh herbs, and flavorful tomato sauce."
+    },
+    {
+      "img": "Chicken_burger",
+      "name": "Chicken Burger",
+      "price": 349,
+      "description": "Crispy chicken fillet burger served with creamy mayo, crunchy onions, and fresh veggies."
+    },
+    {
+      "img": "Hydrabadi_biryani",
+      "name": "Hyderabadi Biryani",
+      "price": 399,
+      "description": "Aromatic basmati rice cooked with authentic spices and tender marinated chicken pieces."
+    },
+    {
+      "img": "Creamy_pasta",
+      "name": "Creamy Pasta",
+      "price": 329,
+      "description": "Delicious creamy white sauce pasta tossed with herbs, garlic, and fresh vegetables."
+    },
+    {
+      "img": "Nudles",
+      "name": "Masala Noodles",
+      "price": 249,
+      "description": "Spicy masala noodles tossed with vegetables, herbs, and flavorful Indo-Chinese seasoning."
+    },
+    {
+      "img": "cl_burger",
+      "name": "Cheese Loaded Burger",
+      "price": 379,
+      "description": "Double cheese burger packed with crispy lettuce, caramelized onions, and smoky mayo."
+    },
+    {
+      "img": "Italian_pizza",
+      "name": "Farmhouse Pizza",
+      "price": 549,
+      "description": "Loaded pizza topped with olives, capsicum, mushrooms, onions, and melted mozzarella."
+    },
+    {
+      "img": "Chicken_burger",
+      "name": "Peri Peri Chicken Burger",
+      "price": 369,
+      "description": "Spicy peri peri chicken burger layered with fresh veggies and creamy garlic sauce."
+    },
+    {
+      "img": "Hydrabadi_biryani",
+      "name": "Chicken Dum Biryani",
+      "price": 459,
+      "description": "Traditional dum-style biryani infused with saffron, spices, and tender chicken pieces."
+    },
+    {
+      "img": "Creamy_pasta",
+      "name": "Red Sauce Pasta",
+      "price": 319,
+      "description": "Classic Italian pasta tossed in rich tomato sauce with herbs and parmesan cheese."
+    },
+    {
+      "img": "Nudles",
+      "name": "Hakka Noodles",
+      "price": 279,
+      "description": "Street-style hakka noodles stir-fried with vegetables and spicy Asian sauces."
+    }
+  ]

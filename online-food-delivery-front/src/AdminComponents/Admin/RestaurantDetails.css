@@ -1,0 +1,389 @@
+.restau-details-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0 0 50px;
+  color: #ffffff;
+}
+
+.restau-title-section {
+  width: 100%;
+  min-height: 82px;
+  margin-bottom: 26px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 107, 44, 0.1),
+      transparent 32%
+    ),
+    #0d0d0d;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.restau-title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: clamp(25px, 3vw, 38px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.restau-status-btn {
+  min-width: 110px !important;
+  min-height: 42px !important;
+  flex-shrink: 0;
+  padding: 9px 22px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #ff6b2c, #f97316) !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.6px;
+  text-transform: uppercase !important;
+  box-shadow: 0 10px 25px rgba(255, 107, 44, 0.2) !important;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease !important;
+}
+
+.restau-status-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 14px 30px rgba(255, 107, 44, 0.3) !important;
+}
+
+.restau-details-page .MuiGrid-container {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.restau-details-page .MuiGrid-item {
+  min-width: 0;
+}
+
+.restau-details-page .MuiCard-root.restau-details-card {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.065) !important;
+  border-radius: 19px !important;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 107, 44, 0.055),
+      transparent 35%
+    ),
+    #0e0e0e !important;
+  color: #ffffff !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24) !important;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+.restau-details-page .MuiCard-root.restau-details-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 107, 44, 0.18) !important;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.32) !important;
+}
+
+.restau-card-header {
+  padding: 20px 24px 17px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.restau-card-header .MuiCardHeader-title {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1.3;
+}
+
+.restau-details-page .MuiCardContent-root {
+  padding: 22px 24px 25px !important;
+}
+
+.restau-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.restau-row {
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(130px, 0.8fr) 20px minmax(0, 1.5fr);
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.restau-row:last-child {
+  border-bottom: none;
+}
+
+.restau-label {
+  min-width: 0;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.restau-dash {
+  color: #444444;
+  font-size: 13px;
+  text-align: center;
+}
+
+.restau-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.restau-open-chip,
+.restau-close-chip {
+  width: fit-content;
+  min-width: 76px;
+  padding: 6px 13px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.restau-open-chip {
+  border: 1px solid rgba(76, 175, 80, 0.25);
+  background: rgba(76, 175, 80, 0.1);
+  color: #81c784;
+}
+
+.restau-close-chip {
+  border: 1px solid rgba(244, 67, 54, 0.25);
+  background: rgba(244, 67, 54, 0.1);
+  color: #ef7770;
+}
+
+.restau-social-container {
+  min-width: 0;
+}
+
+.restau-social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px !important;
+}
+
+.restau-social-links a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #888888;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.restau-social-links a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 107, 44, 0.3);
+  background: rgba(255, 107, 44, 0.09);
+  color: #ff8c5a;
+  box-shadow: 0 8px 20px rgba(255, 107, 44, 0.12);
+}
+
+.restau-social-links .MuiSvgIcon-root {
+  font-size: 19px;
+}
+
+.restau-details-page .MuiGrid-container > .MuiGrid-item {
+  display: flex;
+}
+
+.restau-details-page .MuiGrid-container > .MuiGrid-item > .restau-details-card {
+  flex: 1;
+}
+
+@media (max-width: 1050px) {
+  .restau-title-section {
+    min-height: 76px;
+    padding: 18px 20px;
+  }
+
+  .restau-card-header {
+    padding: 18px 20px 16px !important;
+  }
+
+  .restau-details-page .MuiCardContent-root {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .restau-details-page {
+    padding-bottom: 35px;
+  }
+
+  .restau-title-section {
+    min-height: auto;
+    padding: 17px;
+    border-radius: 17px;
+  }
+
+  .restau-title {
+    font-size: 25px;
+  }
+
+  .restau-status-btn {
+    min-width: 95px !important;
+    min-height: 40px !important;
+    padding: 8px 16px !important;
+  }
+
+  .restau-details-page .MuiCard-root.restau-details-card {
+    border-radius: 16px !important;
+  }
+
+  .restau-row {
+    grid-template-columns: minmax(115px, 0.75fr) 18px minmax(0, 1.5fr);
+    gap: 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  .restau-title-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .restau-title {
+    font-size: 23px;
+    white-space: normal;
+  }
+
+  .restau-status-btn {
+    width: 100%;
+  }
+
+  .restau-card-header {
+    padding: 17px !important;
+  }
+
+  .restau-card-header .MuiCardHeader-title {
+    font-size: 17px !important;
+  }
+
+  .restau-details-page .MuiCardContent-root {
+    padding: 17px !important;
+  }
+
+  .restau-row {
+    grid-template-columns: minmax(105px, 0.7fr) 15px minmax(0, 1.4fr);
+    min-height: 45px;
+    padding: 10px 0;
+  }
+
+  .restau-label {
+    font-size: 10px;
+  }
+
+  .restau-value {
+    font-size: 13px;
+  }
+
+  .restau-social-links a {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .restau-details-page {
+    padding-bottom: 25px;
+  }
+
+  .restau-title-section {
+    padding: 14px;
+  }
+
+  .restau-title {
+    font-size: 21px;
+  }
+
+  .restau-details-page .MuiCardContent-root {
+    padding: 14px !important;
+  }
+
+  .restau-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 12px 0;
+  }
+
+  .restau-dash {
+    display: none;
+  }
+
+  .restau-label {
+    font-size: 10px;
+  }
+
+  .restau-value {
+    font-size: 13px;
+  }
+
+  .restau-social-container {
+    padding-top: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restau-details-page *,
+  .restau-details-page *::before,
+  .restau-details-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,453 @@
+.restau-order-table-wrapper {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: clamp(4px, 1vw, 12px);
+  color: #ffffff;
+}
+
+.restau-order-card {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 107, 44, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(255, 107, 44, 0.04),
+      transparent 28%
+    ),
+    #0d0d0d !important;
+  color: #ffffff !important;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35) !important;
+}
+
+.restau-order-header {
+  min-height: 86px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.restau-order-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.order-status-filter {
+  min-width: 180px !important;
+}
+
+.order-status-filter .MuiInputLabel-root {
+  color: #888888 !important;
+}
+
+.order-status-filter .MuiInputLabel-root.Mui-focused {
+  color: #ff6b2c !important;
+}
+
+.order-status-filter .MuiOutlinedInput-root {
+  min-height: 42px;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  color: #ffffff !important;
+}
+
+.order-status-filter .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.order-status-filter .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 107, 44, 0.4) !important;
+}
+
+.order-status-filter .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #ff6b2c !important;
+}
+
+.order-status-filter .MuiSelect-icon {
+  color: #888888 !important;
+}
+
+.restau-order-table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  max-height: calc(100vh - 210px);
+  background: transparent !important;
+  scrollbar-width: thin;
+  scrollbar-color: #3d3d3d transparent;
+}
+
+.restau-order-table-container::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.restau-order-table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.restau-order-table-container::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #3d3d3d;
+}
+
+.restau-order-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+.restau-order-table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  background: transparent !important;
+}
+
+.restau-order-table .MuiTableCell-root {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055) !important;
+  color: #d7d7d7 !important;
+  font-size: 13px;
+}
+
+.restau-order-table .MuiTableHead-root {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.restau-order-table .MuiTableHead-root .MuiTableCell-root {
+  height: 58px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 107, 44, 0.18) !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 107, 44, 0.075),
+      rgba(255, 255, 255, 0.025)
+    ) !important;
+  color: #a9a9a9 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.restau-order-table .MuiTableBody-root .MuiTableRow-root {
+  background: rgba(255, 255, 255, 0.008);
+  transition:
+    background 0.22s ease,
+    transform 0.22s ease;
+}
+
+.restau-order-table .MuiTableBody-root .MuiTableRow-root:hover {
+  background: rgba(255, 107, 44, 0.045);
+}
+
+.restau-order-table .MuiTableBody-root .MuiTableCell-root {
+  height: 82px;
+  padding: 13px 16px;
+  vertical-align: middle;
+}
+
+.restau-order-id {
+  color: #ff8c5a !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  white-space: nowrap;
+}
+
+.restau-food-image {
+  width: 58px;
+  height: 48px;
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: #161616;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.restau-order-table .MuiTableRow-root:hover .restau-food-image {
+  transform: scale(1.06);
+  border-color: rgba(255, 107, 44, 0.3);
+}
+
+.restau-food-no-image {
+  width: 58px;
+  height: 48px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: #141414;
+  color: #666666;
+  font-size: 9px;
+  text-align: center;
+}
+
+.restau-order-price {
+  color: #ff8c5a !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  white-space: nowrap;
+}
+
+.restau-order-table .MuiChip-root {
+  min-width: 90px;
+  height: 29px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.restau-order-table .MuiChip-colorWarning {
+  border-color: rgba(255, 167, 38, 0.25);
+  background: rgba(255, 167, 38, 0.1);
+  color: #ffb74d;
+}
+
+.restau-order-table .MuiChip-colorInfo {
+  border-color: rgba(41, 182, 246, 0.25);
+  background: rgba(41, 182, 246, 0.1);
+  color: #64b5f6;
+}
+
+.restau-order-table .MuiChip-colorSuccess {
+  border-color: rgba(76, 175, 80, 0.25);
+  background: rgba(76, 175, 80, 0.1);
+  color: #81c784;
+}
+
+.restau-view-btn {
+  min-width: 125px !important;
+  min-height: 36px !important;
+  padding: 7px 14px !important;
+  border-radius: 9px !important;
+  background: linear-gradient(135deg, #ff6b2c, #f97316) !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px;
+  text-transform: none !important;
+  box-shadow: 0 7px 18px rgba(255, 107, 44, 0.16) !important;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease !important;
+}
+
+.restau-view-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 10px 24px rgba(255, 107, 44, 0.28) !important;
+}
+
+.restau-view-btn:active {
+  transform: translateY(0);
+}
+
+.restau-order-table .MuiTableBody-root .MuiTableCell-root[colspan="8"] {
+  height: 180px;
+  color: #666666 !important;
+  font-size: 14px !important;
+}
+
+.MuiMenu-paper {
+  min-width: 190px !important;
+  margin-top: 6px;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px !important;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 107, 44, 0.08),
+      transparent 40%
+    ),
+    #111111 !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root {
+  min-height: 42px;
+  padding: 9px 15px;
+  color: #c7c7c7 !important;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.MuiMenu-paper .MuiMenuItem-root:hover {
+  padding-left: 19px;
+  background: rgba(255, 107, 44, 0.09) !important;
+  color: #ffffff !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.Mui-selected {
+  background: rgba(255, 107, 44, 0.12) !important;
+  color: #ff8c5a !important;
+}
+
+.MuiPopover-root .MuiPaper-root {
+  scrollbar-width: thin;
+}
+
+.MuiSelect-select {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 1200px) {
+  .restau-order-table-wrapper {
+    padding: 4px;
+  }
+
+  .restau-order-header {
+    padding: 18px 20px;
+  }
+
+  .restau-order-table {
+    min-width: 1000px;
+  }
+
+  .restau-order-table .MuiTableHead-root .MuiTableCell-root {
+    padding-inline: 13px;
+  }
+
+  .restau-order-table .MuiTableBody-root .MuiTableCell-root {
+    padding-inline: 13px;
+  }
+}
+
+@media (max-width: 800px) {
+  .restau-order-card {
+    border-radius: 17px !important;
+  }
+
+  .restau-order-header {
+    min-height: auto;
+    padding: 17px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .restau-order-header h2 {
+    font-size: 24px;
+  }
+
+  .order-status-filter {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .restau-order-table-container {
+    max-height: calc(100vh - 230px);
+  }
+
+  .restau-order-table {
+    min-width: 980px;
+  }
+}
+
+@media (max-width: 600px) {
+  .restau-order-table-wrapper {
+    padding: 0;
+  }
+
+  .restau-order-header {
+    padding: 15px;
+  }
+
+  .restau-order-header h2 {
+    font-size: 21px;
+  }
+
+  .restau-order-table {
+    min-width: 920px;
+  }
+
+  .restau-order-table .MuiTableHead-root .MuiTableCell-root {
+    height: 52px;
+    padding: 11px 12px;
+    font-size: 10px !important;
+  }
+
+  .restau-order-table .MuiTableBody-root .MuiTableCell-root {
+    height: 74px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .restau-food-image,
+  .restau-food-no-image {
+    width: 52px;
+    height: 44px;
+  }
+
+  .restau-order-table .MuiChip-root {
+    min-width: 82px;
+    height: 27px;
+    font-size: 9px;
+  }
+
+  .restau-view-btn {
+    min-width: 112px !important;
+    min-height: 34px !important;
+    font-size: 9px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .restau-order-header {
+    padding: 13px;
+  }
+
+  .restau-order-header h2 {
+    font-size: 19px;
+  }
+
+  .restau-order-table {
+    min-width: 880px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restau-order-table *,
+  .restau-order-table *::before,
+  .restau-order-table *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,1227 @@
+
+.restau-menu-create-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 34px 42px 70px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(255, 107, 53, 0.07),
+      transparent 30%
+    ),
+    #0b0b0b;
+
+  color: #ffffff;
+}
+
+
+
+
+.restau-menu-create-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  animation: restauMenuCreateFadeIn 0.45s ease;
+}
+
+
+
+
+.restau-menu-create-header {
+  margin-bottom: 30px;
+}
+
+.restau-menu-create-header h1 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 2rem;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.restau-menu-create-header p {
+  margin: 0;
+
+  color: #8f8f8f;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+
+
+
+.restau-menu-create-form {
+  width: 100%;
+}
+
+
+
+
+.restau-menu-form-section {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 28px 30px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(27, 27, 27, 0.98),
+      rgba(15, 15, 15, 0.98)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 16px;
+
+  box-shadow:
+    0 16px 45px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.restau-menu-form-section:hover {
+  border-color: rgba(255, 107, 53, 0.18);
+
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.32),
+    0 0 30px rgba(255, 107, 53, 0.025);
+}
+
+
+
+
+.restau-menu-section-title {
+  position: relative;
+
+  margin-bottom: 25px;
+  padding-left: 14px;
+}
+
+.restau-menu-section-title::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 3px;
+
+  width: 3px;
+  height: calc(100% - 6px);
+
+  border-radius: 4px;
+
+  background: linear-gradient(
+    180deg,
+    #ff6b35,
+    #f97316
+  );
+}
+
+.restau-menu-section-title h2 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: -0.15px;
+}
+
+.restau-menu-section-title p {
+  margin: 0;
+
+  color: #858585;
+
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+
+
+
+.restau-menu-image-upload-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  gap: 16px;
+}
+
+
+.restau-menu-upload-box {
+  width: 150px;
+  height: 150px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border: 1.5px dashed rgba(255, 107, 53, 0.55);
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 107, 53, 0.08),
+      rgba(255, 107, 53, 0.025)
+    );
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.restau-menu-upload-box:hover {
+  border-color: #ff6b35;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 107, 53, 0.13),
+      rgba(255, 107, 53, 0.04)
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(255, 107, 53, 0.08);
+}
+
+
+
+.restau-menu-upload-box input[type="file"] {
+  display: none;
+}
+
+
+
+
+.restau-menu-upload-box label {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+
+
+.restau-menu-upload-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #ff6b35;
+}
+
+.restau-menu-upload-content svg {
+  font-size: 34px;
+}
+
+.restau-menu-upload-content span {
+  color: #d1d5db;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+
+
+.restau-menu-image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  flex: 1;
+}
+
+
+
+
+.restau-menu-image-preview {
+  position: relative;
+
+  width: 150px;
+  height: 150px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #151515;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.32);
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.restau-menu-image-preview:hover {
+  border-color: rgba(255, 107, 53, 0.35);
+
+  transform: translateY(-2px);
+}
+
+.restau-menu-image-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.restau-menu-image-preview:hover img {
+  transform: scale(1.06);
+}
+
+
+
+
+.restau-menu-remove-image {
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  cursor: pointer;
+
+  backdrop-filter: blur(4px);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.restau-menu-remove-image:hover {
+  background: #ef4444;
+
+  transform: scale(1.08);
+}
+
+.restau-menu-remove-image svg {
+  font-size: 17px;
+}
+
+
+
+.restau-menu-input-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.restau-menu-input-group label {
+  color: #e5e7eb;
+
+  font-size: 0.86rem;
+  font-weight: 600;
+
+  letter-spacing: 0.1px;
+}
+
+
+
+
+.restau-menu-input-group input,
+.restau-menu-input-group textarea,
+.restau-menu-input-group select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  background: #111111;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+
+
+.restau-menu-input-group input {
+  height: 48px;
+
+  padding: 0 15px;
+}
+
+
+
+
+.restau-menu-input-group textarea {
+  min-height: 120px;
+
+  padding: 13px 15px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+
+
+
+.restau-menu-input-group select {
+  height: 48px;
+
+  padding: 0 14px;
+
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+
+
+
+.restau-menu-input-group input::placeholder,
+.restau-menu-input-group textarea::placeholder {
+  color: #626262;
+}
+
+
+
+
+.restau-menu-input-group input:focus,
+.restau-menu-input-group textarea:focus,
+.restau-menu-input-group select:focus {
+  background: #151515;
+
+  border-color: #ff6b35;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 53, 0.09);
+}
+
+
+.restau-menu-input-group select option {
+  color: #ffffff;
+
+  background: #1a1a1a;
+}
+
+
+
+
+.restau-menu-input-group input[type="number"]::-webkit-inner-spin-button,
+.restau-menu-input-group input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0.6;
+}
+
+
+
+
+.restau-menu-ingredient-input {
+  width: 100%;
+  max-width: 760px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 4px;
+}
+
+
+
+
+.restau-menu-ingredient-input select {
+  flex: 1;
+
+  height: 48px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  background: #111111;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.restau-menu-ingredient-input select:focus {
+  background: #151515;
+
+  border-color: #ff6b35;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 53, 0.09);
+}
+
+.restau-menu-ingredient-input select option {
+  color: #ffffff;
+
+  background: #1a1a1a;
+}
+
+
+
+
+.restau-menu-add-ingredient-btn {
+  height: 48px;
+
+  min-width: 92px;
+
+  padding: 0 21px;
+
+  border: none;
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b35,
+    #f97316
+  );
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(255, 107, 53, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.restau-menu-add-ingredient-btn:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(255, 107, 53, 0.22);
+}
+
+.restau-menu-add-ingredient-btn:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 5px 12px rgba(255, 107, 53, 0.15);
+}
+
+
+
+
+.restau-menu-ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 17px;
+}
+
+
+
+
+.restau-menu-ingredient-chip {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 34px;
+
+  padding: 5px 7px 5px 13px;
+
+  box-sizing: border-box;
+
+  color: #f0f0f0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 107, 53, 0.12),
+      rgba(255, 107, 53, 0.055)
+    );
+
+  border: 1px solid rgba(255, 107, 53, 0.25);
+
+  border-radius: 20px;
+
+  font-size: 0.82rem;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.restau-menu-ingredient-chip:hover {
+  background:
+    rgba(255, 107, 53, 0.16);
+
+  border-color:
+    rgba(255, 107, 53, 0.38);
+}
+
+
+
+.restau-menu-ingredient-chip button {
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  color: #a7a7a7;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.restau-menu-ingredient-chip button:hover {
+  color: #ffffff;
+
+  background: #ef4444;
+
+  transform: scale(1.06);
+}
+
+.restau-menu-ingredient-chip svg {
+  font-size: 14px;
+}
+
+
+
+
+.restau-menu-switch-container {
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+}
+
+
+
+.restau-menu-switch-container .MuiFormControlLabel-root {
+  margin: 0;
+
+  padding: 7px 14px 7px 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #d1d5db;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.restau-menu-switch-container
+.MuiFormControlLabel-root:hover {
+  border-color: rgba(255, 107, 53, 0.2);
+
+  background: rgba(255, 107, 53, 0.035);
+}
+
+.restau-menu-switch-container
+.MuiFormControlLabel-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+
+
+.restau-menu-switch-container .MuiSwitch-root {
+  margin-right: 5px;
+}
+
+.restau-menu-switch-container
+.MuiSwitch-switchBase.Mui-checked {
+  color: #ff6b35;
+}
+
+.restau-menu-switch-container
+.MuiSwitch-switchBase.Mui-checked
++ .MuiSwitch-track {
+  background-color: #ff6b35;
+
+  opacity: 0.65;
+}
+
+.restau-menu-switch-container
+.MuiSwitch-track {
+  background-color: #555555;
+}
+
+
+
+
+.restau-menu-submit-section {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 8px;
+}
+
+
+
+.restau-menu-submit-btn {
+  min-width: 205px;
+
+  padding: 14px 27px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b35,
+    #f97316
+  );
+
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 23px rgba(255, 107, 53, 0.17);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.restau-menu-submit-btn:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 30px rgba(255, 107, 53, 0.27);
+}
+
+.restau-menu-submit-btn:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 7px 16px rgba(255, 107, 53, 0.18);
+}
+
+
+.restau-menu-submit-btn:disabled,
+.restau-menu-add-ingredient-btn:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+
+.restau-menu-create-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.restau-menu-create-page::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+
+.restau-menu-create-page::-webkit-scrollbar-thumb {
+  background: #303030;
+
+  border-radius: 10px;
+}
+
+.restau-menu-create-page::-webkit-scrollbar-thumb:hover {
+  background: #ff6b35;
+}
+
+
+
+@keyframes restauMenuCreateFadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .restau-menu-create-page {
+    padding: 30px 30px 60px;
+  }
+
+  .restau-menu-create-container {
+    max-width: 1100px;
+  }
+
+  .restau-menu-form-section {
+    padding: 26px;
+  }
+
+  .restau-menu-upload-box,
+  .restau-menu-image-preview {
+    width: 135px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 992px) {
+  .restau-menu-create-page {
+    padding: 26px 24px 55px;
+  }
+
+  .restau-menu-create-header {
+    margin-bottom: 26px;
+  }
+
+  .restau-menu-create-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .restau-menu-form-section {
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  .restau-menu-section-title {
+    margin-bottom: 21px;
+  }
+
+  .restau-menu-section-title h2 {
+    font-size: 1.12rem;
+  }
+
+  .restau-menu-image-upload-wrapper {
+    gap: 13px;
+  }
+
+  .restau-menu-upload-box,
+  .restau-menu-image-preview {
+    width: 125px;
+    height: 125px;
+  }
+
+  .restau-menu-image-preview-container {
+    gap: 13px;
+  }
+
+  .restau-menu-submit-btn {
+    min-width: 185px;
+  }
+}
+
+@media (max-width: 768px) {
+  .restau-menu-create-page {
+    padding: 22px 18px 45px;
+  }
+
+  .restau-menu-create-header {
+    margin-bottom: 22px;
+  }
+
+  .restau-menu-create-header h1 {
+    font-size: 1.55rem;
+    letter-spacing: -0.2px;
+  }
+
+  .restau-menu-create-header p {
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .restau-menu-form-section {
+    padding: 21px 19px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+  }
+
+  .restau-menu-section-title {
+    margin-bottom: 20px;
+    padding-left: 12px;
+  }
+
+  .restau-menu-section-title h2 {
+    font-size: 1.05rem;
+  }
+
+  .restau-menu-section-title p {
+    font-size: 0.82rem;
+  }
+
+  .restau-menu-image-upload-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .restau-menu-upload-box,
+  .restau-menu-image-preview {
+    width: 100%;
+    height: 125px;
+  }
+
+  .restau-menu-image-preview-container {
+    display: contents;
+  }
+
+  .restau-menu-upload-content svg {
+    font-size: 30px;
+  }
+
+  .restau-menu-upload-content span {
+    font-size: 0.76rem;
+    text-align: center;
+  }
+
+  .restau-menu-input-group {
+    gap: 7px;
+  }
+
+  .restau-menu-input-group label {
+    font-size: 0.84rem;
+  }
+
+  .restau-menu-input-group input,
+  .restau-menu-input-group select {
+    height: 46px;
+  }
+
+  .restau-menu-input-group textarea {
+    min-height: 110px;
+  }
+
+  .restau-menu-ingredient-input {
+    max-width: none;
+    gap: 9px;
+  }
+
+  .restau-menu-ingredient-input select {
+    height: 46px;
+  }
+
+  .restau-menu-add-ingredient-btn {
+    height: 46px;
+    min-width: 82px;
+    padding: 0 17px;
+  }
+
+  .restau-menu-switch-container {
+    gap: 14px;
+  }
+
+  .restau-menu-switch-container .MuiFormControlLabel-root {
+    padding: 6px 11px 6px 6px;
+  }
+
+  .restau-menu-submit-section {
+    justify-content: stretch;
+  }
+
+  .restau-menu-submit-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .restau-menu-create-page {
+    padding: 18px 13px 38px;
+  }
+
+  .restau-menu-create-header {
+    margin-bottom: 20px;
+  }
+
+  .restau-menu-create-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .restau-menu-create-header p {
+    font-size: 0.8rem;
+  }
+
+  .restau-menu-form-section {
+    padding: 19px 16px;
+    border-radius: 13px;
+  }
+
+  .restau-menu-section-title {
+    margin-bottom: 18px;
+  }
+
+  .restau-menu-section-title h2 {
+    font-size: 1rem;
+  }
+
+  .restau-menu-section-title p {
+    font-size: 0.78rem;
+  }
+
+  .restau-menu-image-upload-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+  }
+
+  .restau-menu-upload-box,
+  .restau-menu-image-preview {
+    height: 105px;
+  }
+
+  .restau-menu-remove-image {
+    top: 5px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .restau-menu-remove-image svg {
+    font-size: 14px;
+  }
+
+  .restau-menu-upload-content {
+    gap: 6px;
+  }
+
+  .restau-menu-upload-content svg {
+    font-size: 25px;
+  }
+
+  .restau-menu-upload-content span {
+    font-size: 0.68rem;
+  }
+
+  .restau-menu-ingredient-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .restau-menu-ingredient-input select {
+    width: 100%;
+  }
+
+  .restau-menu-add-ingredient-btn {
+    width: 100%;
+    height: 44px;
+  }
+
+  .restau-menu-ingredients-list {
+    gap: 7px;
+    margin-top: 14px;
+  }
+
+  .restau-menu-ingredient-chip {
+    min-height: 32px;
+    padding: 4px 6px 4px 11px;
+    font-size: 0.78rem;
+  }
+
+  .restau-menu-ingredient-chip button {
+    width: 21px;
+    height: 21px;
+  }
+
+  .restau-menu-switch-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 9px;
+  }
+
+  .restau-menu-switch-container .MuiFormControlLabel-root {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .restau-menu-submit-btn {
+    padding: 13px 20px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .restau-menu-create-page {
+    padding: 16px 10px 32px;
+  }
+
+  .restau-menu-create-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .restau-menu-create-header p {
+    font-size: 0.76rem;
+  }
+
+  .restau-menu-form-section {
+    padding: 17px 13px;
+    margin-bottom: 15px;
+  }
+
+  .restau-menu-section-title {
+    padding-left: 10px;
+  }
+
+  .restau-menu-section-title h2 {
+    font-size: 0.95rem;
+  }
+
+  .restau-menu-section-title p {
+    font-size: 0.75rem;
+  }
+
+  .restau-menu-image-upload-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .restau-menu-upload-box,
+  .restau-menu-image-preview {
+    height: 88px;
+  }
+
+  .restau-menu-upload-content svg {
+    font-size: 21px;
+  }
+
+  .restau-menu-upload-content span {
+    font-size: 0.6rem;
+  }
+
+  .restau-menu-input-group input,
+  .restau-menu-input-group select {
+    height: 44px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 0.84rem;
+  }
+
+  .restau-menu-input-group textarea {
+    min-height: 100px;
+    padding: 11px 12px;
+    font-size: 0.84rem;
+  }
+
+  .restau-menu-input-group label {
+    font-size: 0.8rem;
+  }
+
+  .restau-menu-ingredient-input select {
+    height: 44px;
+    font-size: 0.84rem;
+  }
+
+  .restau-menu-add-ingredient-btn {
+    height: 43px;
+    font-size: 0.84rem;
+  }
+
+  .restau-menu-submit-btn {
+    padding: 12px 18px;
+  }
+}

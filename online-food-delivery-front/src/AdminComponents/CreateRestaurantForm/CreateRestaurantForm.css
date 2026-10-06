@@ -1,0 +1,575 @@
+/* =====================================================
+   PAGE
+===================================================== */
+
+.restau-create-page {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 40px 35px 70px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 107, 53, 0.08),
+      transparent 35%
+    ),
+    #0b0b0b;
+
+  color: #fff;
+
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.restau-create-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.restau-create-header {
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.restau-create-header h1 {
+  margin: 0;
+
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.restau-create-header p {
+  margin: 10px auto 0;
+
+  max-width: 700px;
+
+  color: #999;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.restau-create-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FORM SECTION
+===================================================== */
+
+.restau-form-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #161616,
+      #101010
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.restau-section-title {
+  width: 100%;
+
+  margin-bottom: 24px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.restau-section-title h2 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.restau-section-title p {
+  margin: 6px 0 0;
+
+  color: #888;
+
+  font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   INPUT GROUP
+===================================================== */
+
+.restau-input-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+}
+
+.restau-input-group label {
+  color: #ddd;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.restau-input-group input,
+.restau-input-group textarea {
+  width: 100%;
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  background: #0d0d0d;
+
+  border: 1px solid #333;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+
+  transition: 0.25s ease;
+}
+
+.restau-input-group input {
+  height: 48px;
+}
+
+.restau-input-group textarea {
+  min-height: 115px;
+
+  resize: vertical;
+}
+
+.restau-input-group input::placeholder,
+.restau-input-group textarea::placeholder {
+  color: #666;
+}
+
+.restau-input-group input:focus,
+.restau-input-group textarea:focus {
+  border-color: #ff6b35;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+
+/* =====================================================
+   IMAGE UPLOAD
+===================================================== */
+
+.restau-image-upload-wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+}
+
+.restau-upload-box {
+  width: 110px;
+  height: 110px;
+
+  flex: 0 0 110px;
+
+  box-sizing: border-box;
+
+  border: 1px dashed #555;
+
+  border-radius: 12px;
+
+  background: #0d0d0d;
+
+  overflow: hidden;
+}
+
+.restau-upload-box input {
+  display: none;
+}
+
+.restau-upload-box label {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  cursor: pointer;
+}
+
+.restau-upload-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #888;
+}
+
+.restau-upload-content svg {
+  font-size: 30px;
+}
+
+.restau-upload-content span {
+  font-size: 0.72rem;
+}
+
+
+/* =====================================================
+   IMAGE PREVIEW
+===================================================== */
+
+.restau-image-preview-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  max-width: 100%;
+}
+
+.restau-image-preview {
+  position: relative;
+
+  width: 110px;
+  height: 110px;
+
+  flex: 0 0 110px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  border: 1px solid #333;
+
+  background: #111;
+}
+
+.restau-image-preview img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =====================================================
+   REMOVE IMAGE
+===================================================== */
+
+.restau-remove-image {
+  position: absolute !important;
+
+  top: 5px;
+  right: 5px;
+
+  width: 27px !important;
+  height: 27px !important;
+
+  padding: 0 !important;
+
+  background: rgba(0, 0, 0, 0.75) !important;
+
+  color: #fff !important;
+}
+
+.restau-remove-image:hover {
+  background: #ef4444 !important;
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.restau-submit-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.restau-submit-btn {
+  min-width: 220px;
+
+  padding: 14px 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b35,
+      #f97316
+    );
+
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.restau-submit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .restau-create-page {
+    padding: 30px 22px 60px;
+  }
+
+  .restau-form-section {
+    padding: 23px;
+  }
+
+}
+
+
+/* =====================================================
+   IMPORTANT MOBILE BREAKPOINT
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .restau-create-page {
+    padding: 25px 15px 55px;
+  }
+
+  .restau-create-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .restau-create-header {
+    margin-bottom: 25px;
+  }
+
+  .restau-create-header h1 {
+    font-size: 1.45rem;
+  }
+
+  .restau-create-header p {
+    font-size: 0.82rem;
+  }
+
+
+  /* Form sections */
+
+  .restau-form-section {
+    width: 100%;
+
+    padding: 18px;
+
+    border-radius: 14px;
+  }
+
+
+  /* =================================================
+     FORCE MUI GRID TO FULL WIDTH
+  ================================================= */
+
+  .restau-form-section .MuiGrid-root {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .restau-form-section .MuiGrid-item {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+
+  /* Inputs */
+
+  .restau-input-group {
+    width: 100%;
+  }
+
+  .restau-input-group input,
+  .restau-input-group textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* Images */
+
+  .restau-upload-box,
+  .restau-image-preview {
+    width: 90px;
+    height: 90px;
+
+    flex-basis: 90px;
+  }
+
+
+  /* Submit */
+
+  .restau-submit-section {
+    justify-content: stretch;
+  }
+
+  .restau-submit-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .restau-create-page {
+    padding: 20px 10px 45px;
+  }
+
+  .restau-form-section {
+    padding: 15px;
+
+    border-radius: 12px;
+  }
+
+  .restau-create-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .restau-create-header p {
+    font-size: 0.76rem;
+  }
+
+  .restau-section-title h2 {
+    font-size: 1rem;
+  }
+
+  .restau-section-title p {
+    font-size: 0.76rem;
+  }
+
+  .restau-input-group label {
+    font-size: 0.82rem;
+  }
+
+  .restau-input-group input {
+    height: 45px;
+
+    font-size: 0.88rem;
+  }
+
+  .restau-input-group textarea {
+    min-height: 100px;
+
+    font-size: 0.88rem;
+  }
+
+  .restau-upload-box,
+  .restau-image-preview {
+    width: 80px;
+    height: 80px;
+
+    flex-basis: 80px;
+  }
+
+}

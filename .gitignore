@@ -1,0 +1,23 @@
+# Backend
+Online-Food-Ordering/.env
+Online-Food-Ordering/.env.*
+!Online-Food-Ordering/.env.example
+Online-Food-Ordering/target/
+Online-Food-Ordering/.idea/
+Online-Food-Ordering/.vscode/
+
+# Frontend
+online-food-delivery-front/node_modules/
+online-food-delivery-front/dist/
+online-food-delivery-front/.env
+online-food-delivery-front/.env.*
+!online-food-delivery-front/.env.example
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

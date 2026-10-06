@@ -1,0 +1,235 @@
+.restau-ingredient-category-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.restau-ingredient-category-card {
+  background: #171717 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px !important;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.restau-ingredient-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.restau-ingredient-category-header h2 {
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.restau-ingredient-category-actions {
+  display: flex;
+  align-items: center;
+}
+
+.restau-ingredient-category-add-btn {
+  width: 42px !important;
+  height: 42px !important;
+  background: #ff6b35 !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+.restau-ingredient-category-add-btn:hover {
+  background: #ff814f !important;
+  transform: rotate(90deg);
+}
+
+.restau-ingredient-category-table-container {
+  background: transparent !important;
+  box-shadow: none !important;
+    height: calc(100vh - 100px);
+  overflow: auto !important;
+}
+
+
+
+
+
+
+
+.restau-ingredient-category-table {
+  min-width: 350px;
+  background: transparent;
+}
+
+.restau-ingredient-category-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #1f1f1f !important;
+
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.restau-ingredient-category-table tbody tr {
+  transition: 0.25s;
+}
+
+.restau-ingredient-category-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+
+
+.restau-ingredient-category-table tbody td {
+  color: #f1f5f9 !important;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 15px;
+}
+
+@media (max-width: 992px) {
+  .restau-ingredient-category-header {
+    padding: 18px;
+  }
+
+  .restau-ingredient-category-header h2 {
+    font-size: 1.15rem;
+  }
+
+  .restau-ingredient-category-table tbody td,
+  .restau-ingredient-category-table thead th {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .restau-ingredient-category-card {
+    border-radius: 14px !important;
+  }
+
+  .restau-ingredient-category-header {
+    padding: 16px;
+  }
+
+  .restau-ingredient-category-add-btn {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
+
+
+
+/* for ingredients tables */
+
+
+.restau-ingredient-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.restau-ingredient-card {
+  background: #171717 !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,.35);
+}
+
+.restau-ingredient-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.restau-ingredient-header h2 {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.restau-ingredient-actions {
+  display: flex;
+  align-items: center;
+}
+
+.restau-ingredient-add-btn {
+  width: 42px !important;
+  height: 42px !important;
+  background: #ff6b35 !important;
+  color: #fff !important;
+  transition: .3s;
+}
+
+.restau-ingredient-add-btn:hover {
+  background: #ff814f !important;
+  transform: rotate(90deg);
+}
+
+.restau-ingredient-table-container {
+  background: transparent !important;
+  box-shadow: none !important;
+    height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.restau-ingredient-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.restau-ingredient-table-container::-webkit-scrollbar-thumb {
+  background: #ff6b35;
+  border-radius: 20px;
+}
+
+.restau-ingredient-table {
+  min-width: 650px;
+}
+
+.restau-ingredient-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #1f1f1f !important;
+
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255,255,255,.08);
+}
+
+.restau-ingredient-table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,.02);
+}
+
+.restau-ingredient-table tbody tr:hover {
+  background: rgba(255,107,53,.08);
+}
+
+.restau-ingredient-table tbody td {
+  color: #f3f4f6 !important;
+  padding: 18px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+@media (max-width: 768px) {
+  .restau-ingredient-header {
+    padding: 18px;
+  }
+
+  .restau-ingredient-header h2 {
+    font-size: 1.15rem;
+  }
+
+  .restau-ingredient-table tbody td,
+  .restau-ingredient-table thead th {
+    padding: 14px;
+    font-size: 14px;
+  }
+}

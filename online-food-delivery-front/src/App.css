@@ -1,0 +1,23 @@
+
+:root{
+  --bg-black: #0a0a0a9f;
+--card-bg: #121212b6;
+--soft-card: #1b1b1ba8;
+
+--primary: #ff6b35;
+--secondary: #ff8c42;
+
+--text-white: #ffffff;
+--text-gray: #b0b0b0;
+
+--border: rgba(255,255,255,0.08);
+
+--glow: rgba(255,107,53,0.35);
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

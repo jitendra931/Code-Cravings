@@ -1,0 +1,15 @@
+
+Missing API's for real world app 
+
+1. Payment Module (BIGGEST MISSING PART)
+2. Address Management APIs Missing
+3. Review & Rating System Missing
+4. Food Details Endpoint Missing
+5. Restaurant Favorites Fetch Missing
+6. Order Authorization Gaps
+7. Global Exception Handling Missing
+8. Validation Missing
+9. Pagination Missing
+10. API Response Standardization Missing
+11. Image Upload System Missing
+12. Notification System Missing
