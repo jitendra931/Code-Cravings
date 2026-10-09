@@ -24,12 +24,11 @@ public class AppConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-    .requestMatchers("/api/restaurants/**").permitAll()
-    .requestMatchers("/api/food").permitAll()
-    .requestMatchers("/api/admin/**").hasAnyRole("RESTAURANT_OWNER", "ADMIN")
-    .requestMatchers("/api/**").authenticated()
-    .anyRequest().permitAll()
-)
+                        .requestMatchers("/api/restaurants/**").permitAll()
+                        .requestMatchers("/api/food").permitAll()
+                        .requestMatchers("/api/admin/**").hasAnyRole("RESTAURANT_OWNER", "ADMIN")
+                        .requestMatchers("/api/**").authenticated()
+                        .anyRequest().permitAll())
                 .addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class)
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()));
@@ -45,7 +44,8 @@ public class AppConfig {
         config.setAllowedOrigins(Arrays.asList(
                 "http://localhost:3000", // React local
                 "http://localhost:5173", // Vite
-                "http://10.127.98.96:5173"));
+                "http://10.127.98.96:5173",
+                "http://172.30.7.225:5173/"));
 
         config.setAllowedMethods(Collections.singletonList("*"));
         config.setAllowedHeaders(Collections.singletonList("*"));

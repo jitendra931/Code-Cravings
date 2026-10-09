@@ -1,291 +1,280 @@
 .RestaurantDetails {
   width: 100%;
   min-height: 100vh;
-
   box-sizing: border-box;
-
   padding: clamp(20px, 3vw, 40px) clamp(14px, 3vw, 40px);
-
   background: linear-gradient(
     to bottom,
     #050505 0%,
     #0d0d0d 100%
   );
-
   color: #ffffff;
-
   overflow-x: hidden;
 }
 
 .restau-imgs {
-  width: min(100%, 1450px);
-
-  margin: 0 auto;
+  width: calc(100% + clamp(28px, 6vw, 80px));
+  max-width: none;
+  margin-left: calc(-1 * clamp(14px, 3vw, 40px));
+  margin-top: calc(-1 * clamp(20px, 3vw, 40px));
+  box-sizing: border-box;
 }
 
-.restau-imgs h2 {
-  margin: 0 0 clamp(20px, 2vw, 30px);
-
-  font-size: clamp(0.72rem, 0.9vw, 0.9rem);
-
-  font-weight: 500;
-
-  color: #8b8b8b;
-
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
-
-  line-height: 1.5;
+.restaurant-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(560px, 72vh, 760px);
+  overflow: hidden;
+  border-radius: 28px;
+  background: #111111;
+  isolation: isolate;
 }
 
-.restau-imgs img {
+.restaurant-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.restaurant-hero-image img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-
-  border-radius: clamp(16px, 2vw, 28px);
-
-  border: 1px solid rgba(255, 255, 255, 0.05);
-
-  cursor: pointer;
-
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease,
-    border-color 0.45s ease;
+  object-position: center;
+  border: none;
+  border-radius: 0;
+  animation: restaurantHeroImage 0.7s ease;
 }
 
-.restau-imgs img:hover {
-  transform: scale(1.015);
-
-  border-color: rgba(255, 107, 53, 0.2);
-
-  box-shadow:
-    0 0 40px rgba(255, 107, 53, 0.18),
-    0 0 80px rgba(255, 107, 53, 0.08);
+.restaurant-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.72) 25%,
+      rgba(0, 0, 0, 0.38) 58%,
+      rgba(0, 0, 0, 0.12) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.38) 42%,
+      rgba(0, 0, 0, 0.06) 100%
+    );
 }
 
-.restau-imgs .MuiGrid-root:first-child img {
-  height: clamp(280px, 31vw, 450px);
-}
-
-.restau-imgs .MuiGrid-root:nth-child(2) img,
-.restau-imgs .MuiGrid-root:nth-child(3) img {
-  height: clamp(200px, 21vw, 300px);
-}
-
-.restau-imgs > div {
-  margin-bottom: 1rem;
-}
-
-.restau-imgs > div:last-child {
-  margin-top: clamp(24px, 3vw, 40px);
-
-  padding: clamp(20px, 3vw, 40px);
-
-  border-radius: clamp(18px, 2vw, 32px);
-
-  background: rgba(255, 255, 255, 0.03);
-
-  backdrop-filter: blur(14px);
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.03);
-
-  transition:
-    background 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.restau-imgs > div:last-child:hover {
-  border-color: rgba(255, 255, 255, 0.09);
-
-  background: rgba(255, 255, 255, 0.035);
-}
-
-.restau-imgs h1 {
-  margin: 0 0 clamp(10px, 1vw, 16px);
-
-  font-size: clamp(2rem, 4.2vw, 4rem);
-
-  font-weight: 800;
-
-  line-height: 1.1;
-
+.restaurant-hero-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(760px, 75%);
+  padding: 60px 60px 70px;
+  box-sizing: border-box;
   color: #ffffff;
+}
 
-  letter-spacing: -1px;
+.restaurant-hero-text {
+  margin-bottom: 30px;
+}
 
+.restaurant-name {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: clamp(3rem, 5.2vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -2px;
   overflow-wrap: anywhere;
 }
 
 .Restau-Desc {
-  width: min(100%, 950px);
-
-  margin: 1rem 0 0;
-
-  font-size: clamp(0.9rem, 1.1vw, 1.08rem);
-
-  line-height: 1.9;
-
-  color: #b8b8b8;
-}
-
-.loc-time {
-  margin-top: clamp(24px, 2.5vw, 36px);
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: clamp(10px, 1.2vw, 16px);
-}
-
-.loc-time p {
-  width: fit-content;
-
-  max-width: 100%;
-
-  box-sizing: border-box;
-
+  width: min(100%, 680px);
   margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  line-height: 1.65;
+}
 
-  padding: clamp(12px, 1vw, 16px) clamp(14px, 1.4vw, 22px);
-
+.restaurant-details {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
 
+.restaurant-detail-card {
+  display: flex;
   align-items: center;
-
-  gap: clamp(10px, 1vw, 16px);
-
-  border-radius: 18px;
-
-  background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid rgba(255, 255, 255, 0.05);
-
-  color: #d6d6d6;
-
-  font-size: clamp(0.85rem, 1vw, 1rem);
-
-  line-height: 1.5;
-
-  backdrop-filter: blur(10px);
-
+  gap: 13px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 50px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background: rgba(15, 15, 15, 0.58);
+  color: rgba(255, 255, 255, 0.94);
+  font-size: clamp(0.84rem, 1vw, 0.96rem);
+  line-height: 1.4;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.loc-time p:hover {
-  transform: translateX(8px);
-
-  background: rgba(255, 107, 53, 0.08);
-
-  border-color: rgba(255, 107, 53, 0.25);
-
-  box-shadow:
-    0 0 20px rgba(255, 107, 53, 0.15),
-    0 0 45px rgba(255, 107, 53, 0.08);
+.restaurant-detail-card:hover {
+  background: rgba(20, 20, 20, 0.72);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateX(5px);
 }
 
-.loc-time svg {
+.restaurant-detail-card svg {
   flex-shrink: 0;
+  color: #ffffff;
+  font-size: 22px;
+}
 
-  color: #ff6b35;
+.restaurant-detail-card span {
+  overflow-wrap: anywhere;
+}
 
-  font-size: clamp(1.35rem, 1.7vw, 1.7rem) !important;
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.48);
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 42px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.hero-arrow-left {
+  left: 24px;
+}
+
+.hero-arrow-right {
+  right: 24px;
+}
+
+.hero-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateX(-50%);
+}
+
+.hero-indicator {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition:
+    width 0.25s ease,
+    background 0.25s ease;
+}
+
+.hero-indicator.active {
+  width: 30px;
+  background: #ffffff;
+}
+
+@keyframes restaurantHeroImage {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .MuiDivider-root {
   border-color: rgba(255, 255, 255, 0.08) !important;
-
   margin: clamp(2rem, 3vw, 3rem) 0 !important;
 }
 
 .restaurant-menu-section {
   width: min(100%, 1500px);
-
   margin: 0 auto;
-
   box-sizing: border-box;
-
   padding: 0 clamp(0px, 1vw, 16px);
 }
 
 .restaurant-menu-layout {
   width: 100%;
-
   display: grid;
-
   grid-template-columns:
     minmax(240px, 300px)
     minmax(0, 1fr);
-
   gap: clamp(20px, 3vw, 44px);
-
   align-items: start;
 }
 
 .filter-section {
   width: 100%;
-
   min-width: 0;
 }
 
 .filter-heading {
   margin: 0 0 12px;
-
   font-size: clamp(22px, 2vw, 28px);
-
   font-weight: 700;
-
   line-height: 1.2;
-
   color: #ffffff;
 }
 
 .filter-box {
   width: 100%;
-
   box-sizing: border-box;
-
   padding: clamp(20px, 2.5vw, 32px);
-
   border: 1px solid rgba(255, 255, 255, 0.07);
-
   border-radius: clamp(18px, 2vw, 28px);
-
   background: rgba(255, 255, 255, 0.03);
-
   backdrop-filter: blur(14px);
-
   box-shadow:
     0 10px 40px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.03);
-
   position: sticky;
-
   top: 110px;
-
   max-height: calc(100vh - 130px);
-
   overflow-y: auto;
-
   scrollbar-width: thin;
-
   scrollbar-color: #444 transparent;
-
   transition:
     border-color 0.35s ease,
     background 0.35s ease,
@@ -302,13 +291,11 @@
 
 .filter-box::-webkit-scrollbar-thumb {
   background: #444;
-
   border-radius: 10px;
 }
 
 .filter-box:hover {
   border-color: rgba(255, 255, 255, 0.1);
-
   background: rgba(255, 255, 255, 0.035);
 }
 
@@ -318,13 +305,9 @@
 
 .filter-title {
   margin: 0 0 clamp(14px, 1.5vw, 20px) !important;
-
   font-size: clamp(21px, 2vw, 29px) !important;
-
   font-weight: 700 !important;
-
   line-height: 1.25 !important;
-
   color: #ffffff !important;
 }
 
@@ -338,13 +321,9 @@
 
 .filter-radio {
   width: fit-content;
-
   max-width: 100%;
-
   margin: 0 !important;
-
   border-radius: 8px;
-
   transition:
     transform 0.25s ease,
     background 0.25s ease;
@@ -352,19 +331,14 @@
 
 .filter-radio:hover {
   transform: translateX(5px);
-
   background: rgba(255, 107, 53, 0.05);
 }
 
 .filter-radio .MuiFormControlLabel-label {
   font-size: clamp(14px, 1.1vw, 17px);
-
   font-weight: 600;
-
   line-height: 1.4;
-
   color: #d4d4d4;
-
   transition: color 0.25s ease;
 }
 
@@ -374,7 +348,6 @@
 
 .filter-radio .MuiRadio-root {
   color: rgba(255, 255, 255, 0.4);
-
   transition:
     color 0.25s ease,
     transform 0.25s ease;
@@ -390,39 +363,25 @@
 
 .filter-divider {
   margin: clamp(20px, 2vw, 30px) 0 !important;
-
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 .menu-section {
   width: 100%;
-
   min-width: 0;
-
   min-height: 500px;
-
   box-sizing: border-box;
-
   padding: clamp(14px, 2vw, 28px);
-
   display: flex;
-
   flex-direction: column;
-
   gap: clamp(14px, 1.5vw, 20px);
-
   background: rgba(255, 255, 255, 0.03);
-
   border: 1px solid rgba(255, 255, 255, 0.06);
-
   border-radius: clamp(18px, 2vw, 32px);
-
   backdrop-filter: blur(14px);
-
   box-shadow:
     0 10px 40px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.03);
-
   transition:
     border-color 0.35s ease,
     background 0.35s ease,
@@ -435,41 +394,25 @@
 
 .mobile-filter-wrapper {
   display: none;
-
   width: 100%;
-
   margin-bottom: 16px;
 }
 
 .mobile-filter-button {
   width: 100%;
-
   min-height: 50px;
-
   padding: 12px 18px;
-
   box-sizing: border-box;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   border-radius: 12px;
-
   background: #181818;
-
   color: #ffffff;
-
   font-size: clamp(15px, 1.5vw, 17px);
-
   font-weight: 700;
-
   cursor: pointer;
-
   transition:
     background 0.3s ease,
     border-color 0.3s ease,
@@ -479,9 +422,7 @@
 
 .mobile-filter-button:hover {
   background: #222222;
-
   border-color: rgba(255, 107, 53, 0.35);
-
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -491,7 +432,6 @@
 
 .filter-arrow {
   font-size: 12px;
-
   transition: transform 0.3s ease;
 }
 
@@ -504,7 +444,6 @@
     grid-template-columns:
       minmax(220px, 270px)
       minmax(0, 1fr);
-
     gap: 24px;
   }
 
@@ -514,6 +453,15 @@
 
   .menu-section {
     padding: 20px;
+  }
+
+  .restaurant-hero-content {
+    width: min(720px, 80%);
+    padding: 50px 48px 60px;
+  }
+
+  .restaurant-name {
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
   }
 }
 
@@ -532,15 +480,10 @@
 
   .filter-section {
     display: grid;
-
     grid-template-rows: 0fr;
-
     opacity: 0;
-
     margin-bottom: 0;
-
     overflow: hidden;
-
     transition:
       grid-template-rows 0.4s ease,
       opacity 0.3s ease,
@@ -549,15 +492,12 @@
 
   .filter-section > * {
     min-height: 0;
-
     overflow: hidden;
   }
 
   .filter-section.filter-section-open {
     grid-template-rows: 1fr;
-
     opacity: 1;
-
     margin-bottom: 20px;
   }
 
@@ -567,24 +507,26 @@
 
   .filter-box {
     width: 100%;
-
     position: static;
-
     top: auto;
-
     max-height: none;
-
     overflow: visible;
-
     padding: clamp(20px, 3vw, 30px);
-
     border-radius: 18px;
   }
 
   .menu-section {
     width: 100%;
-
     padding: clamp(14px, 2vw, 24px);
+  }
+
+  .restaurant-hero {
+    height: 620px;
+  }
+
+  .restaurant-hero-content {
+    width: 100%;
+    padding: 45px 40px 60px;
   }
 }
 
@@ -593,45 +535,84 @@
     padding: 16px 12px;
   }
 
-  .restau-imgs h2 {
-    margin-bottom: 20px;
-
-    font-size: 0.72rem;
+  .restaurant-hero {
+    height: 650px;
+    min-height: 650px;
+    border-radius: 22px;
   }
 
-  .restau-imgs .MuiGrid-root:first-child img,
-  .restau-imgs .MuiGrid-root:nth-child(2) img,
-  .restau-imgs .MuiGrid-root:nth-child(3) img {
-    height: 220px;
-
-    border-radius: 16px;
+  .restaurant-hero-overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.62) 48%,
+        rgba(0, 0, 0, 0.12) 100%
+      );
   }
 
-  .restau-imgs > div:last-child {
-    padding: 20px;
+  .restaurant-hero-content {
+    width: 100%;
+    padding: 35px 28px 58px;
+  }
 
-    border-radius: 20px;
+  .restaurant-name {
+    margin-bottom: 13px;
+    font-size: clamp(2.6rem, 9vw, 4rem);
+    letter-spacing: -1.2px;
   }
 
   .Restau-Desc {
-    line-height: 1.75;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
-  .loc-time p {
-    width: 100%;
+  .restaurant-hero-text {
+    margin-bottom: 22px;
+  }
 
-    max-width: 100%;
+  .restaurant-details {
+    gap: 9px;
+  }
+
+  .restaurant-detail-card {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    border-radius: 12px;
+    font-size: 0.84rem;
+  }
+
+  .restaurant-detail-card svg {
+    font-size: 20px;
+  }
+
+  .hero-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .hero-arrow-left {
+    left: 12px;
+  }
+
+  .hero-arrow-right {
+    right: 12px;
+  }
+
+  .hero-indicators {
+    bottom: 18px;
   }
 
   .menu-section {
     padding: 12px;
-
     border-radius: 18px;
   }
 
   .filter-box {
     padding: 20px;
-
     border-radius: 16px;
   }
 }
@@ -641,50 +622,42 @@
     padding: 14px 10px;
   }
 
-  .restau-imgs h1 {
-    font-size: clamp(1.8rem, 8vw, 2.4rem);
-
-    letter-spacing: -0.5px;
+  .restaurant-hero {
+    height: 670px;
+    min-height: 670px;
+    border-radius: 18px;
   }
 
-  .restau-imgs h2 {
-    font-size: 0.68rem;
-
-    letter-spacing: 0.7px;
+  .restaurant-hero-content {
+    padding: 28px 20px 52px;
   }
 
-  .restau-imgs .MuiGrid-root:first-child img,
-  .restau-imgs .MuiGrid-root:nth-child(2) img,
-  .restau-imgs .MuiGrid-root:nth-child(3) img {
-    height: 190px;
-  }
-
-  .restau-imgs > div:last-child {
-    padding: 16px;
-
-    border-radius: 16px;
+  .restaurant-name {
+    font-size: clamp(2.25rem, 11vw, 3.2rem);
   }
 
   .Restau-Desc {
-    font-size: 0.92rem;
-
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 
-  .loc-time {
-    margin-top: 20px;
-
-    gap: 10px;
+  .restaurant-detail-card {
+    min-height: 44px;
+    font-size: 0.8rem;
   }
 
-  .loc-time p {
-    padding: 11px 12px;
+  .hero-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 28px;
+  }
 
-    gap: 10px;
+  .hero-arrow-left {
+    left: 10px;
+  }
 
-    font-size: 0.85rem;
-
-    border-radius: 12px;
+  .hero-arrow-right {
+    right: 10px;
   }
 
   .mobile-filter-wrapper {
@@ -693,15 +666,12 @@
 
   .mobile-filter-button {
     min-height: 48px;
-
     padding: 11px 15px;
-
     border-radius: 10px;
   }
 
   .filter-box {
     padding: 18px;
-
     border-radius: 14px;
   }
 
@@ -723,9 +693,7 @@
 
   .menu-section {
     padding: 8px;
-
     border-radius: 14px;
-
     gap: 12px;
   }
 }
@@ -735,24 +703,22 @@
     padding: 12px 8px;
   }
 
-  .restau-imgs .MuiGrid-root:first-child img,
-  .restau-imgs .MuiGrid-root:nth-child(2) img,
-  .restau-imgs .MuiGrid-root:nth-child(3) img {
-    height: 165px;
-
-    border-radius: 12px;
+  .restaurant-hero {
+    height: 680px;
+    min-height: 680px;
   }
 
-  .restau-imgs > div:last-child {
-    padding: 14px;
-
-    border-radius: 14px;
+  .restaurant-hero-content {
+    padding: 25px 17px 50px;
   }
 
-  .loc-time p {
-    padding: 10px;
+  .restaurant-name {
+    font-size: 2.2rem;
+  }
 
-    font-size: 0.8rem;
+  .restaurant-detail-card {
+    padding: 0 11px;
+    font-size: 0.76rem;
   }
 
   .filter-box {
@@ -761,3 +727,76 @@
 }
 
 
+
+.restaurant-hero-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 55%;
+  padding: 60px 60px 70px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.restaurant-hero-text {
+  margin-bottom: 30px;
+}
+
+.restaurant-name {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3rem, 5.2vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -2px;
+  overflow-wrap: anywhere;
+}
+
+.restaurant-hero-description {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  z-index: 2;
+  width: min(400px, 30%);
+  transform: translateY(-50%);
+}
+
+.restaurant-hero-description .Restau-Desc {
+  width: 100%;
+  margin: 0;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.7;
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
+  /* border-radius: 20px; */
+  /* background: rgba(10, 10, 10, 0.38); */
+  /* backdrop-filter: blur(14px); */
+  /* -webkit-backdrop-filter: blur(14px); */
+}
+
+
+@media (max-width: 768px) {
+  .restaurant-hero-content {
+    width: 100%;
+    padding: 35px 28px 58px;
+  }
+
+  .restaurant-hero-description {
+    position: absolute;
+    top: auto;
+    right: auto;
+    left: 28px;
+    bottom: 58px;
+    width: calc(100% - 56px);
+    transform: none;
+  }
+
+  .restaurant-hero-description .Restau-Desc {
+    padding: 16px 18px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+}

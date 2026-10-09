@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import FormControl from "@mui/material/FormControl";
@@ -37,6 +38,7 @@ const RestaurantDetails = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [filterOpen, setFilterOpen] = useState(false);
 
+  const [currentImage, setCurrentImage] = useState(0);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -75,6 +77,18 @@ const RestaurantDetails = () => {
   }, [dispatch, id, jwt]);
 
   useEffect(() => {
+    if (!restaurant?.images?.length || restaurant.images.length <= 1) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % restaurant.images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [restaurant?.images]);
+
+  useEffect(() => {
     dispatch(
       getMenuItemsByRestaurantId({
         jwt,
@@ -90,51 +104,93 @@ const RestaurantDetails = () => {
   return (
     <div className="RestaurantDetails">
       <section className="restau-imgs">
-        <div className="restaurant-images">
-          <Grid container spacing={2}>
-            <Grid size={12}>
-              <img src={restaurant?.images?.[0]} alt="" />
-            </Grid>
-
-            <Grid size={{ xs: 12, md: 6 }}>
-              <img src={restaurant?.images?.[1]} alt="" />
-            </Grid>
-
-            <Grid size={{ xs: 12, md: 6 }}>
-              <img src={restaurant?.images?.[2]} alt="" />
-            </Grid>
-          </Grid>
-        </div>
-
-        <div className="restaurant-information">
-          <h1 className="restaurant-name">{restaurant?.name}</h1>
-
-          <p className="Restau-Desc">{restaurant?.description}</p>
-
-          <div className="loc-time">
-            <p className="restaurant-location">
-              <LocationOnIcon />
-
-              <span>
-                {restaurant?.address?.street},{restaurant?.address?.city},
-                {restaurant?.address?.state} -{restaurant?.address?.zip}
-              </span>
-            </p>
-
-            <p className="restaurant-hours">
-              <CalendarTodayIcon />
-
-              <span>{restaurant?.openingHours}(Today)</span>
-
-              <span>{restaurant?.contactInformation?.email}</span>
-            </p>
-
-            <p className="restaurant-hours">
-              <CalendarTodayIcon />
-
-              <span>{restaurant?.contactInformation?.email}</span>
-            </p>
+        <div className="restaurant-hero">
+          <div className="restaurant-hero-image">
+            {restaurant?.images?.length > 0 && (
+              <img
+                key={currentImage}
+                src={restaurant.images[currentImage]}
+                alt={restaurant?.name}
+              />
+            )}
           </div>
+
+          <div className="restaurant-hero-overlay"></div>
+
+          <div className="restaurant-hero-content">
+            <div className="restaurant-hero-text">
+              <h1 className="restaurant-name">{restaurant?.name}</h1>
+
+              {/* <p className="Restau-Desc">{restaurant?.description}</p> */}
+            </div>
+
+            <div className="restaurant-details">
+              <div className="restaurant-detail-card">
+                <LocationOnIcon />
+
+                <span>
+                  {restaurant?.address?.street}, {restaurant?.address?.city},{" "}
+                  {restaurant?.address?.state} - {restaurant?.address?.zip}
+                </span>
+              </div>
+
+              <div className="restaurant-detail-card">
+                <CalendarTodayIcon />
+
+                <span>{restaurant?.openingHours} (Today)</span>
+              </div>
+
+              <div className="restaurant-detail-card">
+                <EmailOutlinedIcon />
+
+                <span>{restaurant?.contactInformation?.email}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="restaurant-hero-description">
+            <p className="Restau-Desc">{restaurant?.description}</p>
+          </div>
+
+          {restaurant?.images?.length > 1 && (
+            <>
+              <button
+                type="button"
+                className="hero-arrow hero-arrow-left"
+                onClick={() =>
+                  setCurrentImage(
+                    (currentImage - 1 + restaurant.images.length) %
+                      restaurant.images.length,
+                  )
+                }
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                className="hero-arrow hero-arrow-right"
+                onClick={() =>
+                  setCurrentImage((currentImage + 1) % restaurant.images.length)
+                }
+              >
+                ›
+              </button>
+
+              <div className="hero-indicators">
+                {restaurant.images.map((_, index) => (
+                  <button
+                    type="button"
+                    key={index}
+                    className={`hero-indicator ${
+                      currentImage === index ? "active" : ""
+                    }`}
+                    onClick={() => setCurrentImage(index)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
 
